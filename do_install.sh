@@ -9,6 +9,7 @@ set -x
 git submodule update --init --recursive
 
 # Install essential dependencies
+sudo apt-get update
 sudo apt install -y build-essential
 sudo apt install -y curl
 sudo apt-get install --reinstall python3-pkg-resources
@@ -68,7 +69,7 @@ $PYTHON3_CMD get-pip.py --user
 rm get-pip.py
 
 # Build the dc_gym
-curl -sSL https://install.python-poetry.org | $PYTHON3_CMD -
+#curl -sSL https://install.python-poetry.org | $PYTHON3_CMD -
 yes | poetry cache clear --all .  # Clear Poetry cache, this is sometimes needed
 rm -rf poetry.lock                # # Bugfix for repeated install
 rm -rf dist                       # Bugfix for repeated install

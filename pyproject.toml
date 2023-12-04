@@ -19,14 +19,14 @@ homepage = "https://github.com/dc_gym/iroko"
 keywords = ['tcp', 'congestion control', 'reinforcement learning', 'rl', 'data center']
 
 [tool.poetry.dependencies]
-python = ">=3.6.1"  # Compatible python versions
+python = ">=3.7,<3.12"  # Compatible python versions
 toml = "^0.9"
 numpy = "1.19.*"
 pandas = "1.1.*"
 gym = "0.18.*"
 seaborn = "0.11.*"
 matplotlib = "3.3.*"
-gevent = "21.1.*"
+gevent = "21.12.*"
 ray = "1.7.*"
 opencv-python = "4.5.*"
 tabulate = "0.8.*"
